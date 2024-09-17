@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Today</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+    </header>
+    <div class="container">
+        <h1>Is it Christmas today?</h1>
+        <p>
+            {% if is_christmas %}
+                Yes
+            {% else %}
+                No
+            {% endif %}
+        </p>
+        <a href="{% url 'secret_santa' %}">
+            <button>Go to Secret Santa game</button>
+        </a>
+    </div>
+    <div class="sticker sticker-1"></div>
+    <div class="sticker sticker-2"></div>
+    <div class="sticker sticker-3"></div>
+    <div class="sticker sticker-4"></div>
+    <div class="sticker sticker-5"></div>
+</body>
+</html>
